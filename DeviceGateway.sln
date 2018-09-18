@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceGateway", "DeviceGateway\DeviceGateway.csproj", "{8D7634A9-0F72-4166-9C9E-5D7CF78932D7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Proxy", "Microsoft.AspNetCore.Proxy\Microsoft.AspNetCore.Proxy.csproj", "{7D6809A3-3587-4F0E-86F3-30E66F21D5A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8D7634A9-0F72-4166-9C9E-5D7CF78932D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D7634A9-0F72-4166-9C9E-5D7CF78932D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D7634A9-0F72-4166-9C9E-5D7CF78932D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D6809A3-3587-4F0E-86F3-30E66F21D5A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6809A3-3587-4F0E-86F3-30E66F21D5A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6809A3-3587-4F0E-86F3-30E66F21D5A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6809A3-3587-4F0E-86F3-30E66F21D5A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

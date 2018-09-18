@@ -15,20 +15,20 @@ namespace DeviceGateway
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddProxy(options =>
+            {
+                options.PrepareRequest = (originalRequest, message) =>
+                {
+                    message.Headers.Add("X-Forwarded-Host", originalRequest.Host.Host);
+                    return Task.FromResult(0);
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            app.UseWebSockets().RunProxy(new Uri("https://webapplicationserver.azurewebsites.net/"));
         }
     }
 }
